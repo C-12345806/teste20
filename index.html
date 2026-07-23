@@ -4,17 +4,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meu site estruturado</title>
+        <title>RumoCerto</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="manifest" href="./manifest.webmanifest">
+        <meta name="theme-color" content="#ea580c">
+        <link rel="icon" href="./icons/icon-192.png">
+        <link rel="apple-touch-icon" href="./icons/icon-192.png">
     </head>
 
     <body>
             <header>
-                <meta name="theme-color" content="#ea580c">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" href="./icons/icon-192.png">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
-                
+
                 <div class="logo">
                     <h1>Rumo<span class="destaque">Certo</span></h1>
                 </div>
@@ -90,6 +90,11 @@
             </footer>
 
             <script src="js/script.js"></script>
+            <script>
+              if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('sw.js');
+              }
+            </script>
 
         </body>
         

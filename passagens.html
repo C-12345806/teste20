@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passagens Aéreas</title>
+
+<link rel="stylesheet" href="css/style-passagem.css">
+
+</head>
+
+<body>
+
+<a href="serviços.html" class="btn-voltar">
+    ← Voltar
+</a>
+
+<header>
+
+
+<h1>✈ Passagens Aéreas</h1>
+<p>Encontre as melhores ofertas para sua viagem.</p>
+
+</header>
+
+<section class="pesquisa">
+
+    <input type="text" id="origem" placeholder="Origem">
+
+    <input type="text" id="destino" placeholder="Destino">
+
+    <input type="date" id="data">
+
+    <select id="passageiros">
+        <option value="">Passageiros</option>
+        <option>1 Passageiro</option>
+        <option>2 Passageiros</option>
+        <option>3 Passageiros</option>
+        <option>4 Passageiros</option>
+    </select>
+
+    <button onclick="buscarPassagens()">
+        Buscar
+    </button>
+
+</section>
+
+<!-- RESULTADOS -->
+
+<section id="resultado" class="cards">
+
+    <div class="card">
+
+        <h2>São Paulo → Paris</h2>
+
+        <p><strong>Companhia:</strong> Azul</p>
+
+        <p><strong>Data:</strong> 20/08/2026</p>
+
+        <p class="preco">R$ 399</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>São Paulo → New York</h2>
+
+        <p><strong>Companhia:</strong> Gol</p>
+
+        <p><strong>Data:</strong> 23/08/2026</p>
+
+        <p class="preco">R$ 699</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Rio de Janeiro → Veneza</h2>
+
+        <p><strong>Companhia:</strong> LATAM</p>
+
+        <p><strong>Data:</strong> 28/08/2026</p>
+
+        <p class="preco">R$ 799</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Brasília → Maldivas</h2>
+
+        <p><strong>Companhia:</strong> Azul</p>
+
+        <p><strong>Data:</strong> 02/09/2026</p>
+
+        <p class="preco">R$ 559</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Curitiba → Tóquio</h2>
+
+        <p><strong>Companhia:</strong> Gol</p>
+
+        <p><strong>Data:</strong> 10/09/2026</p>
+
+        <p class="preco">R$ 299</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>São Paulo → Lisboa</h2>
+
+        <p><strong>Companhia:</strong> TAP</p>
+
+        <p><strong>Data:</strong> 15/10/2026</p>
+
+        <p class="preco">R$ 4.299</p>
+
+        <button>Comprar</button>
+
+    </div>
+
+</section>
+
+<script>
+
+function buscarPassagens(){
+
+    let origem = document.getElementById("origem").value.trim();
+    let destino = document.getElementById("destino").value.trim();
+    let data = document.getElementById("data").value;
+    let passageiros = document.getElementById("passageiros").value;
+
+    if(origem=="" || destino=="" || data=="" || passageiros==""){
+
+        alert("Preencha todos os campos!");
+
+        return;
+
+    }
+
+    document.getElementById("resultado").style.display="grid";
+
+}
+
+</script>
+
+</body>
+</html>
